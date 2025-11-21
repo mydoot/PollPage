@@ -26,6 +26,43 @@
   font-size: 100px;
 }
 
+.pollName{
+  font-size: 40px;
+}
+
+.Title{
+   font-size: 80px;
+   display: flex;
+   align-items: center;
+  justify-content: center;
+  text-shadow: 2px 4px 4px #00aeff; 
+   animation: colorchange 5s ease-in-out infinite alternate;
+}
+
+@keyframes colorchange {
+  0% {
+    text-shadow: 2px 4px 4px #00aeff; 
+  }
+
+  to {
+    text-shadow: 2px 4px 6px #0400ff; 
+  }
+}
+
+.seeVotes:hover{
+   color: rgb(255, 255, 255);
+   font-size: 27px;
+    transition-duration: 0.2s;
+}
+
+.seeVotes:hover::before{
+   /* color: rgb(255, 255, 255); */
+   font-size: 25px;
+    transition-duration: 0.2s;
+}
+
+
+
 .Polls{
   size: 500px;
   font-size: 25px;

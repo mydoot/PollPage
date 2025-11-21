@@ -27,10 +27,12 @@ function App() {
   return (
     <main className="container">
       <h1>
+        <div className = "Title">
         Poll Data
+        </div>
       </h1>
       <details className="Polls" open>
-        <summary > Polls </summary>
+        <summary > <div className ="pollName">Polls </div> </summary>
 
 
 
@@ -54,12 +56,12 @@ function App() {
                     {/* 3. Conditional: Only show voter list if there are voters */}
                     {ans.voters.length > 0 && (
                       <details>
-                        <summary>See who voted</summary>
+                        <summary><div className = "seeVotes">See who voted</div></summary>
                         <ul>
                           {/* 4. Innermost Loop: Iterate through VOTERS */}
                           {ans.voters.map((voter: User) => (
                             <li key={voter.id}>
-                              {voter.display_name} <small>(@{voter.username})</small>
+                              {voter.display_name} {/* <small>(@{voter.username})</small> */}
                             </li>
                           ))}
                         </ul>
