@@ -47,7 +47,7 @@ const PollStuff = ({ data }: PollCard) => {
     }
 
     if (!(theWinners.length)) {
-      return "No Votes";
+      return "No Votes Which Is Crazy";
     }
 
     return theWinners.join(" & ")
