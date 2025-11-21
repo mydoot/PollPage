@@ -13,10 +13,20 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.container{
+/* .container{
 
-}
+} */
+
+/* body{
+ display: flexbox;
+  row-gap: 5em;
+} */
 
 .h1{
-  size: 800px;
+  font-size: 100px;
+}
+
+.Polls{
+  size: 500px;
+  font-size: 25px;
 }
