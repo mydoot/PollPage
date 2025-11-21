@@ -24,6 +24,7 @@ interface User {
 function App() {
   /*  const [count, setCount] = useState(0) */
 
+
   return (
     <main className="container">
       <h1>
@@ -40,16 +41,37 @@ function App() {
           <div className="container">
             <article key={index}>
               <header>
-                <h3>{data.question}</h3>
+                <h3>
+                  <span className = "questionName">
+                  {data.question}
+                 </span>
+                </h3>
+                <span className = "totalVoteCounter" style={{ float: 'right' }}>
+                        {data.answers.reduce((acc, ans) => acc + ans.voters.length, 0)} Total Votes
+                  </span>
+                  <p>
+                    <span className = "pollDetails">
+                    Winner: <span className ="ansName" style={{ fontSize: '30px', fontWeight: '500'}}>{data.answers.reduce((prev, current) => (prev.voters.length > current.voters.length) ? prev : current, data.answers[0]).answer}</span>
+                    </span>
+                  </p>
               </header>
+              
               {data.answers.map((ans: Answers, ansIndex: number) => (
+
                 <div className="container">
                   <article key={ansIndex}>
                     <header>
-                      <h3>{ans.answer}</h3>
+                      <h3>
+                        <span className="ansName">
+                        {ans.answer}
+                        </span>
+                        </h3>
+                        <div className = "voterInfo">
                       <span style={{ float: 'right' }}>
-                        {ans.voters.length} Votes
+                        {ans.voters.length} Votes <br></br>
+                        {(ans.voters.length / data.answers.reduce((acc, ans) => acc + ans.voters.length, 0) * 100).toFixed(0)}% of Votes
                       </span>
+                      </div>
                       <progress value={ans.voters.length} max="10" />
                     </header>
 
