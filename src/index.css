@@ -66,6 +66,13 @@ span.totalVoteCounter{
   right: 20px;
 }
 
+span.ansInfo{
+  position: relative;
+  top: 42px;
+  left: 5px;
+}
+
+
 span.ansName{
   text-shadow: 2px 2px 2px #00aeff; 
   font-weight: 400;
@@ -83,6 +90,11 @@ span.questionName{
   justify-content: right;
  font-size: 22px;
  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, serif;
+
+ position: relative;
+
+  top: -30px;
+  right: 20px;
 }
 
 .seeVotes:hover{
